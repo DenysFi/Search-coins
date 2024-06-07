@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css?family=Reddit+Sans:regular,500,600,700,800,900&display=swap");
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+	padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+
+body {
+	min-height: 100vh;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+	font-family: 'Reddit Sans', sans-serif;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+	list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+	max-width: 100%;
+	display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+	margin-top: 1em;
+}
+
+button {
+	all: unset;
+	display: inline-block;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+	border: none;
+	background: none;
+	font-family: inherit;
+	font-size: inherit;
+	text-align: center;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+
+
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+body {}
+
+#root {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: hidden;
+	padding-top: 200px;
+	background-color: #918f8f;
+}
+
+.search {
+	position: relative;
+}
+
+.search__button {
+	display: flex;
+	padding: 5px 10px;
+	align-items: center;
+	gap: 5px;
+	background-color: rgb(197, 197, 197);
+	color: #fff;
+	border-radius: 10px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.search__icon img {
+	width: 18px;
+	height: 18px;
+}
+
+.list-search {
+	position: absolute;
+	right: 0;
+	width: 270px;
+	background-color: rgb(59, 59, 59);
+	border-radius: 10px;
+	color: #fff;
+	transition: opacity 0.2s;
+	opacity: 0;
+	scale: 0;
+}
+
+.list-search.active {
+	opacity: 1;
+	scale: 1;
+}
+
+.list-search__input {
+	padding: 10px 15px;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+
+	border-bottom: 1px solid #8f8f8f;
+}
+
+.list-search__input img {
+	width: 20px;
+	height: 20px;
+}
+
+.list-search__input input {
+	background: transparent;
+	all: unset;
+	box-sizing: border-box;
+	width: 100%;
+	border-radius: 4px;
+}
+
+.list-search__nav {
+	display: flex;
+	justify-content: space-between;
+	text-transform: uppercase;
+	font-size: 16px;
+	margin-bottom: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.list-search__nav button {
+	display: flex;
+	gap: 10px;
+}
+
+.list-search__nav>.active {
+	font-weight: 600;
+}
+
+
+.list-search__items {
+	overflow: auto;
+	scrollbar-width: none;
+	position: relative;
+}
+
+.list-search__body {
+	padding: 10px 5px;
+}
+
+.list-search__item {
+	display: flex;
+	align-items: center;
+	padding: 10px 10px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.list-search__item:hover {
+	background-color: #a19f9f;
+}
+
+
+
+.list-search__favorite {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.list-search__favorite svg {
+	width: 22px;
+	height: 100%;
+	margin-right: 10px;
+
+}
+
+#favico {
+	stroke: #fff;
+	fill: none;
+}
+
+#favico.active {
+	fill: #fff;
+}
+
+.list-search__coin {}
+
+.list-search__close {
+	padding: 2px;
+}
