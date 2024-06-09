@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { ChangeEvent, ComponentPropsWithoutRef, FC } from 'react';
-=======
-import { ChangeEvent, ComponentPropsWithoutRef, FC } from 'react'
->>>>>>> fe5eb9cbe71c22e56b330b447b7821f059bb63c8
 
 interface SearchListInputProps extends ComponentPropsWithoutRef<"div"> {
     onChangeValue: (value: string) => void,
@@ -16,7 +12,6 @@ const SearchListInput: FC<SearchListInputProps> = ({ onChangeValue, value }) => 
 
     return (
         <div className="list-search__input">
-<<<<<<< HEAD
             <div className="list-search__icon">
                 <svg width="20px" height="20px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"  >
                     <g id="Page-1" stroke="none" strokeWidth="3" fill="none" fillRule="evenodd" type="MSPage">
@@ -26,23 +21,16 @@ const SearchListInput: FC<SearchListInputProps> = ({ onChangeValue, value }) => 
                     </g>
                 </svg>
             </div>
-=======
-            <img src="../../../search.svg" alt="" />
->>>>>>> fe5eb9cbe71c22e56b330b447b7821f059bb63c8
             <input placeholder='Search...' type="text" onChange={handleChange} value={value} />
             {value.length > 0 &&
                 <button
                     onClick={() => onChangeValue('')}
                     className='list-search__close'>
-<<<<<<< HEAD
                     <div className="list-search__close-icon">
                         <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path id="close" d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                     </div>
-=======
-                    <img src="../../../close.svg" alt="close" />
->>>>>>> fe5eb9cbe71c22e56b330b447b7821f059bb63c8
                 </button>
             }
         </div>
