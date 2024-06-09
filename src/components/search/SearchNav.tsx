@@ -1,6 +1,11 @@
 import { FC, ReactNode } from 'react'
 import { tabTypes } from '@/constaints/enums';
-import { useSearchContext } from '@/hooks/useSearchContext';
+
+
+interface SearchNavProps {
+    activeTab: tabTypes,
+    setActiveTab: (value: tabTypes) => void
+}
 
 interface SearchNavButtonProps {
     children: ReactNode,
@@ -20,9 +25,7 @@ const SearchNavButton: FC<SearchNavButtonProps> = ({ children, currentTab, type,
     return <button onClick={handleClick} className={isActive ? 'active' : ''}>{children}</button>
 }
 
-const SarchNav: FC = () => {
-    const { setActiveTab, activeTab } = useSearchContext();
-
+const SarchNav: FC<SearchNavProps> = ({ setActiveTab, activeTab }) => {
     return (
         <div className="list-search__nav">
             <SearchNavButton currentTab={activeTab} setActiveTab={setActiveTab} type={tabTypes.FAV}>

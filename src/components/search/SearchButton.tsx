@@ -1,22 +1,9 @@
-import { useSearchContext } from '@/hooks/useSearchContext';
 import { FC } from 'react';
 
 const SearchButton: FC = () => {
-    const { setShowList, setCoords, showList } = useSearchContext()
-
-    function handleClick(e: React.MouseEvent<HTMLButtonElement>) {
-        const rect = e.currentTarget.getBoundingClientRect();
-        const popoverWidth = 270;
-
-        setCoords({
-            left: rect.right - popoverWidth,
-            top: rect.bottom
-        });
-        setShowList(true);
-    }
 
     return (
-        <button className='search__button' onClick={handleClick} disabled={showList}>
+        <div className='search__button' >
             <div className="search__icon">
                 <svg width="20px" height="20px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"  >
                     <g id="Page-1" stroke="none" strokeWidth="3" fill="none" fillRule="evenodd" type="MSPage">
@@ -27,7 +14,7 @@ const SearchButton: FC = () => {
                 </svg>
             </div>
             <span>Search</span>
-        </button>
+        </div>
     )
 };
 export default SearchButton;
