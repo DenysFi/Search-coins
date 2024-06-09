@@ -166,7 +166,6 @@ select {
 	border-bottom: 1px solid #8f8f8f;
 }
 
-
 .list-search__input input {
 	background: transparent;
 	all: unset;
@@ -183,6 +182,7 @@ select {
 	margin-bottom: 20px;
 	padding: 0 15px;
 	margin-top: 20px;
+	user-select: none;
 }
 
 .list-search__nav div {
