@@ -182,7 +182,7 @@ select {
 	margin-bottom: 20px;
 	padding: 0 15px;
 	margin-top: 20px;
-	user-select: none;
+
 }
 
 .list-search__nav div {
@@ -194,6 +194,7 @@ select {
 	display: flex;
 	gap: 10px;
 	align-items: center;
+	user-select: none;
 }
 
 .list-search__nav>.active {
