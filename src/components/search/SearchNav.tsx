@@ -14,14 +14,10 @@ const SarchNav: FC = () => {
                 </div>
                 Favorites
             </button>
-<<<<<<< HEAD
             <button
                 onClick={() => setActiveTab(tabTypes.ALL)}
                 className={activeTab === tabTypes.ALL ? 'active' : ''
                 }>All coins</button>
-=======
-            <button onClick={() => setActiveTab(tabTypes.ALL)} className={activeTab === tabTypes.ALL ? 'active' : ''}>All coins</button>
->>>>>>> fe5eb9cbe71c22e56b330b447b7821f059bb63c8
         </div>
     )
 };
