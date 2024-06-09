@@ -1,4 +1,5 @@
 import { useSearchContext } from '@/hooks/useSearchContext';
+<<<<<<< HEAD
 import { FC } from 'react';
 
 const SearchButton: FC = () => {
@@ -25,6 +26,16 @@ const SearchButton: FC = () => {
                         </g>
                     </g>
                 </svg>
+=======
+import { FC } from 'react'
+
+const SearchButton: FC = () => {
+    const { setShowList } = useSearchContext()
+    return (
+        <button className='search__button' onClick={() => setShowList((prev) => !prev)}>
+            <div className="search__icon">
+                <img src="../../../search.svg" alt="" />
+>>>>>>> fe5eb9cbe71c22e56b330b447b7821f059bb63c8
             </div>
             <span>Search</span>
         </button>

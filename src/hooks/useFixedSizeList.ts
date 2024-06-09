@@ -31,12 +31,16 @@ export default function useFixedSizeList<T extends HTMLElement>(props: IUseFixed
 
         const handleScroll = () => {
             const scrollTop = scrollElement.scrollTop;
+<<<<<<< HEAD
             console.log('sc');
+=======
+>>>>>>> fe5eb9cbe71c22e56b330b447b7821f059bb63c8
             setScrollTop(scrollTop)
         }
         handleScroll();
         scrollElement.addEventListener('scroll', handleScroll);
 
+<<<<<<< HEAD
         return () => {
 
             scrollElement.removeEventListener('scroll', handleScroll)
@@ -48,6 +52,15 @@ export default function useFixedSizeList<T extends HTMLElement>(props: IUseFixed
     const virtualItems = useMemo(() => {
         const rangeStart = scrollTop;
         const rangeEnd = scrollTop + listHeight;
+=======
+        return () => scrollElement.removeEventListener('scroll', handleScroll);
+    }, [getScrollElement])
+
+    const virtualItems = useMemo(() => {
+        const rangeStart = scrollTop;
+        const rangeEnd = scrollTop + listHeight;
+
+>>>>>>> fe5eb9cbe71c22e56b330b447b7821f059bb63c8
         let startIndex = Math.floor(rangeStart / itemHeight);
         let endIndex = Math.ceil(rangeEnd / itemHeight);
 
@@ -64,7 +77,11 @@ export default function useFixedSizeList<T extends HTMLElement>(props: IUseFixed
         return virtualItems
     }, [scrollTop, itemsCount, overscan, itemHeight, listHeight])
 
+<<<<<<< HEAD
     const totalHeight = (itemHeight * itemsCount) + paddingBottom;
+=======
+    const totalHeight = itemHeight * itemsCount;
+>>>>>>> fe5eb9cbe71c22e56b330b447b7821f059bb63c8
 
     return {
         virtualItems,

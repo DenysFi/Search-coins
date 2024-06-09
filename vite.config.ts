@@ -10,6 +10,10 @@ export default defineConfig({
       "@/*": path.resolve(__dirname, "src/*"),
 
     }
+<<<<<<< HEAD
   },
   base: '/Search-coins'
+=======
+  }
+>>>>>>> fe5eb9cbe71c22e56b330b447b7821f059bb63c8
 })
