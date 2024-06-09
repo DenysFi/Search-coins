@@ -145,17 +145,6 @@ select {
 
 .list-search {
 	width: 270px;
-	background-color: rgb(59, 59, 59);
-	border-radius: 10px;
-	color: #fff;
-	transition: opacity 0.2s;
-	opacity: 0;
-	scale: 0;
-}
-
-.list-search.active {
-	opacity: 1;
-	scale: 1;
 }
 
 .list-search__input {
@@ -277,4 +266,17 @@ select {
 
 .list-search__close {
 	padding: 2px;
+}
+
+.app-popover__content {
+	display: none;
+	background-color: rgb(59, 59, 59);
+	border-radius: 10px;
+	color: #fff;
+	opacity: 0;
+}
+
+.app-popover__content.show {
+	display: block;
+	opacity: 1;
 }

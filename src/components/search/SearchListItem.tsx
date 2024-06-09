@@ -1,24 +1,17 @@
-import { useSearchContext } from '@/hooks/useSearchContext';
+
 import { ComponentPropsWithoutRef, FC } from 'react';
 
 interface SearchListItemProps extends ComponentPropsWithoutRef<"div"> {
     coin: string,
+    active: boolean
 }
 
-const SearchListItem: FC<SearchListItemProps> = ({ coin, ...props }) => {
-    const { setfavoriteCoins, favoriteCoins } = useSearchContext();
-    const active = favoriteCoins.includes(coin);
-
-    function hanldeItemClick() {
-        setfavoriteCoins((prev) => active ?
-            prev.filter(fc => fc !== coin) :
-            [...prev, coin])
-    }
+const SearchListItem: FC<SearchListItemProps> = ({ coin, active, ...props }) => {
 
     return (
         <div
             {...props}
-            onClick={hanldeItemClick}
+
             className="list-search__item">
             <button className="list-search__favorite">
                 <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
