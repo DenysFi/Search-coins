@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css?family=REM:regular,500,600,700&display=swap");
-=======
-@import url("https://fonts.googleapis.com/css?family=Reddit+Sans:regular,500,600,700,800,900&display=swap");
->>>>>>> fe5eb9cbe71c22e56b330b447b7821f059bb63c8
 
 *,
 *::before,
@@ -40,11 +36,7 @@ body {
 	scroll-behavior: smooth;
 	text-rendering: optimizeSpeed;
 	line-height: 1.5;
-<<<<<<< HEAD
 	font-family: 'REM';
-=======
-	font-family: 'Reddit Sans', sans-serif;
->>>>>>> fe5eb9cbe71c22e56b330b447b7821f059bb63c8
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
@@ -102,11 +94,6 @@ select {
 	}
 }
 
-<<<<<<< HEAD
-
-=======
-body {}
->>>>>>> fe5eb9cbe71c22e56b330b447b7821f059bb63c8
 
 #root {
 	min-height: 100vh;
@@ -118,15 +105,12 @@ body {}
 	background-color: #918f8f;
 }
 
-<<<<<<< HEAD
 @media (max-width:767px) {
 	#root {
 		padding-top: 60px;
 	}
 }
 
-=======
->>>>>>> fe5eb9cbe71c22e56b330b447b7821f059bb63c8
 .search {
 	position: relative;
 }
@@ -136,7 +120,6 @@ body {}
 	padding: 5px 10px;
 	align-items: center;
 	gap: 5px;
-<<<<<<< HEAD
 	justify-content: center;
 	background-color: rgb(197, 197, 197);
 	border-radius: 10px;
@@ -161,23 +144,6 @@ body {}
 }
 
 .list-search {
-=======
-	background-color: rgb(197, 197, 197);
-	color: #fff;
-	border-radius: 10px;
-	font-weight: 600;
-	text-transform: uppercase;
-}
-
-.search__icon img {
-	width: 18px;
-	height: 18px;
-}
-
-.list-search {
-	position: absolute;
-	right: 0;
->>>>>>> fe5eb9cbe71c22e56b330b447b7821f059bb63c8
 	width: 270px;
 	background-color: rgb(59, 59, 59);
 	border-radius: 10px;
@@ -197,28 +163,13 @@ body {}
 	display: flex;
 	gap: 10px;
 	align-items: center;
-<<<<<<< HEAD
 	border-bottom: 1px solid #8f8f8f;
 }
 
-=======
-
-	border-bottom: 1px solid #8f8f8f;
-}
-
-.list-search__input img {
-	width: 20px;
-	height: 20px;
-}
->>>>>>> fe5eb9cbe71c22e56b330b447b7821f059bb63c8
 
 .list-search__input input {
 	background: transparent;
 	all: unset;
-<<<<<<< HEAD
-=======
-	box-sizing: border-box;
->>>>>>> fe5eb9cbe71c22e56b330b447b7821f059bb63c8
 	width: 100%;
 	border-radius: 4px;
 }
@@ -226,7 +177,6 @@ body {}
 .list-search__nav {
 	display: flex;
 	justify-content: space-between;
-<<<<<<< HEAD
 	align-items: center;
 	text-transform: uppercase;
 	font-size: 16px;
@@ -238,22 +188,12 @@ body {}
 .list-search__nav div {
 	display: flex;
 	text-align: center;
-=======
-	text-transform: uppercase;
-	font-size: 16px;
-	margin-bottom: 20px;
-	padding-left: 10px;
-	padding-right: 10px;
->>>>>>> fe5eb9cbe71c22e56b330b447b7821f059bb63c8
 }
 
 .list-search__nav button {
 	display: flex;
 	gap: 10px;
-<<<<<<< HEAD
 	align-items: center;
-=======
->>>>>>> fe5eb9cbe71c22e56b330b447b7821f059bb63c8
 }
 
 .list-search__nav>.active {
@@ -262,7 +202,6 @@ body {}
 
 
 .list-search__items {
-<<<<<<< HEAD
 	overflow-y: auto;
 	position: relative;
 }
@@ -287,45 +226,25 @@ body {}
 }
 
 
-=======
-	overflow: auto;
-	scrollbar-width: none;
-	position: relative;
-}
-
-.list-search__body {
-	padding: 10px 5px;
-}
-
->>>>>>> fe5eb9cbe71c22e56b330b447b7821f059bb63c8
 .list-search__item {
 	display: flex;
 	align-items: center;
 	padding: 10px 10px;
-<<<<<<< HEAD
 	margin: 0 5px;
 	border-radius: 10px;
 	cursor: pointer;
 	width: calc(100% - 9px);
 	user-select: none;
-=======
-	border-radius: 10px;
-	cursor: pointer;
->>>>>>> fe5eb9cbe71c22e56b330b447b7821f059bb63c8
 }
 
 .list-search__item:hover {
 	background-color: #a19f9f;
 }
 
-<<<<<<< HEAD
 .list-search__close-icon {
 	display: flex;
 	align-items: center;
 }
-=======
-
->>>>>>> fe5eb9cbe71c22e56b330b447b7821f059bb63c8
 
 .list-search__favorite {
 	display: flex;
@@ -350,14 +269,10 @@ body {}
 	fill: #fff;
 }
 
-<<<<<<< HEAD
 .list-search__coin {
 	text-align: center;
 
 }
-=======
-.list-search__coin {}
->>>>>>> fe5eb9cbe71c22e56b330b447b7821f059bb63c8
 
 .list-search__close {
 	padding: 2px;
