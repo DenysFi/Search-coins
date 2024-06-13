@@ -97,12 +97,13 @@ select {
 
 #root {
 	min-height: 100vh;
-	display: flex;
+
 	flex-direction: column;
 	align-items: center;
 	overflow: hidden;
-	padding-top: 200px;
+	padding-top: 400px;
 	background-color: #918f8f;
+
 }
 
 @media (max-width:767px) {
@@ -268,6 +269,11 @@ select {
 	padding: 2px;
 }
 
+.app-popover {
+	width: fit-content;
+	height: fit-content;
+}
+
 .app-popover__content {
 	display: none;
 	background-color: rgb(59, 59, 59);
@@ -280,3 +286,9 @@ select {
 	display: block;
 	opacity: 1;
 }
+
+.popover__button {
+	margin-left: 20px;
+}
+
+.portal {}

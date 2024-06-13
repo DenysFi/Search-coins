@@ -32,9 +32,8 @@ const Portal: FC<PortalProps> = ({ children, elementCoords }) => {
         if (key === 'right') innerDiv.style.right = newValue
         if (key === 'bottom') innerDiv.style.bottom = newValue
         if (key === 'left') innerDiv.style.left = newValue
-
         if (key === 'transformX' || key === 'transformY') {
-            const transformValue = `${key === 'transformX' ? 'translateX' : 'translateY'}(${value}px)`;
+            const transformValue = `${key === 'transformX' ? 'translateX' : 'translateY'}(${value}%)`;
             transformValues.push(transformValue);
         }
     }
@@ -45,9 +44,10 @@ const Portal: FC<PortalProps> = ({ children, elementCoords }) => {
 
     div.appendChild(innerDiv)
     useEffect(() => {
-        document.body.appendChild(div);
+        const portal = document.querySelector('#portal-root')!
+        portal.appendChild(div);
         return () => {
-            document.body.removeChild(div);
+            portal.removeChild(div);
         };
     }, [div]);
 

@@ -11,7 +11,6 @@ const SearchListItem: FC<SearchListItemProps> = ({ coin, active, ...props }) => 
     return (
         <div
             {...props}
-
             className="list-search__item">
             <button className="list-search__favorite">
                 <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
