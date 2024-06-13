@@ -97,12 +97,13 @@ select {
 
 #root {
 	min-height: 100vh;
-	display: flex;
+
 	flex-direction: column;
 	align-items: center;
 	overflow: hidden;
-	padding-top: 200px;
+	padding-top: 400px;
 	background-color: #918f8f;
+
 }
 
 @media (max-width:767px) {
@@ -280,3 +281,10 @@ select {
 	display: block;
 	opacity: 1;
 }
+
+.popover__button {
+	margin-top: 100px;
+	margin-left: 20px;
+}
+
+.portal {}

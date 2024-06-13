@@ -5,6 +5,8 @@ function App() {
   return (
     <main className='main'>
       <Search />
+
+
     </main>
   )
 }
