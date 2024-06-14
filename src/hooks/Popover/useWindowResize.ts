@@ -7,3 +7,4 @@ export default function useWindowResize(callback: () => void) {
         return () => window.removeEventListener('resize', callback)
     }, [callback])
 }
+

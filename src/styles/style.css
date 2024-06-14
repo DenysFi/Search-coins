@@ -97,11 +97,10 @@ select {
 
 #root {
 	min-height: 100vh;
-
 	flex-direction: column;
 	align-items: center;
 	overflow: hidden;
-	padding-top: 400px;
+	padding-top: 600px;
 	background-color: #918f8f;
 
 }
@@ -112,9 +111,7 @@ select {
 	}
 }
 
-.search {
-	position: relative;
-}
+
 
 .search__button {
 	display: flex;

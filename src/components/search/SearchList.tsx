@@ -66,7 +66,6 @@ const SearchList: FC<SearchListProps> = ({ coins }) => {
                 </div>
             </div>
         </div>
-
     )
 };
 export default SearchList;

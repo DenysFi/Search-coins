@@ -26,20 +26,27 @@ const Popover: FC<PopoverProps> = ({ children, content, position = positionEnum.
 
         function getPosition(rect: DOMRect, contentWidth: number, contentHeight: number) {
             const topContentPoint = rect.y - contentHeight;
-            const bottomContentPoint = rect.y + contentHeight
+            const bottomContentPoint = rect.y + rect.height + contentHeight
             const leftContentPoint = rect.x - contentWidth;
-            // const rightContentPoint = rect.x + contentWidth
-            console.log(leftContentPoint);
-
+            const rightContentPoint = rect.x + rect.width + contentWidth
 
             if (leftContentPoint < 0) {
                 if (bottomContentPoint < window.innerHeight) {
                     return positionEnum.BOTTOMLEFT
                 } else if (topContentPoint > 0) {
                     return positionEnum.TOPLEFT
+                } else {
+                    return positionEnum.RIGHTCENTER
                 }
-
-
+            }
+            if (rightContentPoint > window.innerWidth) {
+                if (bottomContentPoint < window.innerHeight) {
+                    return positionEnum.BOTTOMRIGHT
+                } else if (topContentPoint < 0) {
+                    return positionEnum.BOTTOMRIGHT
+                } else {
+                    return positionEnum.LEFTCENTER
+                }
             }
 
 
@@ -69,7 +76,7 @@ const Popover: FC<PopoverProps> = ({ children, content, position = positionEnum.
 
         const pos = getPosition(rect, contentWidth, contentHeight)!;
         console.log(pos);
-        const coords = getCoordsByPosition(rect, contentWidth, contentHeight, positionEnum.RIGHTCENTER)
+        const coords = getCoordsByPosition(rect, contentWidth, contentHeight, pos)
         setCoords({ ...coords })
 
     }, [contentWidth, contentHeight, position])
@@ -103,7 +110,7 @@ const Popover: FC<PopoverProps> = ({ children, content, position = positionEnum.
                     {content}
                 </div>
             </Portal>
-            <div ref={hiddenRef} style={{ visibility: 'hidden', position: 'absolute', pointerEvents: 'none' }}>
+            <div ref={hiddenRef} style={{ visibility: 'hidden', position: 'absolute', left: 0, top: 0, pointerEvents: 'none' }}>
                 {content}
             </div>
         </div>

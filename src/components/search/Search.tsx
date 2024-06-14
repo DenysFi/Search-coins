@@ -1,21 +1,30 @@
-import { FC, useEffect, useState } from 'react';
+
 import SearchButton from './SearchButton';
 import SearchList from './SearchList';
 
 import Popover from '../Common/Popover';
+import { FC, useState, useEffect, useCallback } from 'react';
 
 const Search: FC = () => {
     const [coins, setCoins] = useState([]);
 
-    useEffect(() => {
-        const loadData = async () => {
-            const response = await fetch('https://api-eu.okotoki.com/coins');
+    const loadData = useCallback(async () => {
+        const abortController = new AbortController();
+        try {
+            const response = await fetch('https://api-eu.okotoki.com/coins', { signal: abortController.signal });
             const data = await response.json();
-            setCoins(data)
+            setCoins(data);
+        } catch (error) {
+            console.error(error);
         }
+        return () => {
+            abortController.abort();
+        };
+    }, []);
 
-        loadData()
-    }, [])
+    useEffect(() => {
+        loadData();
+    }, [loadData]);
 
     return (
         <>
@@ -26,6 +35,7 @@ const Search: FC = () => {
                 <SearchButton />
             </Popover>
         </>
-    )
+    );
 };
+
 export default Search;
