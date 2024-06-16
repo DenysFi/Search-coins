@@ -1,11 +1,11 @@
 import { positionEnum } from '@/constaints/enums';
 import useContentWidth from '@/hooks/Popover/useContentWidth';
+import useWindowResize from '@/hooks/Popover/useWindowResize';
 import useOnClickOutside from '@/hooks/useClickOutside';
-import { FC, ReactNode, useCallback, useRef, useState } from 'react';
-import Portal from './Portal';
 import { Coords, PositionType } from '@/types';
 import { getCoordsByPosition } from '@/utiles';
-import useWindowResize from '@/hooks/Popover/useWindowResize';
+import { FC, ReactNode, useCallback, useRef, useState } from 'react';
+import Portal from './Portal';
 
 interface PopoverProps {
     children: ReactNode,
